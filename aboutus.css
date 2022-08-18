@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap');
+
+:root{
+   --peru:#cd9452;
+   --black:#222;
+   --white:#fff;
+   --light-black:#666;
+   --light-white:#ccc;
+   --light-bg:#f5f5f5;
+   --dark-bg:rgba(0,0,0,.7);
+   --border:.1rem solid #aaa;
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Dosis', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition: all 0.4s cubic-bezier(.43,1.1,.62,1.08);
+   text-transform: capitalize;
+}
+
+* > img{
+   user-select: none;
+   pointer-events: none;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar{
+   width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+   background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+   background-color: var(--peru);
+}
+
+
+section{
+   padding:5rem 10%;
+   
+}
+
+
+
+
+
+.header{
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: var(--box-shadow);
+   position: sticky;
+   top:0; left:0; right: 0;
+   background: var(--white);
+   z-index: 1000;
+}
+
+.header .logo{
+   font-size: 2.5rem;
+   font-weight: bolder;
+   color:var(--black);
+}
+
+.header .logo i{
+   color:var(--peru);
+   padding-right: .5rem;
+}
+
+.header .navbar a{
+   font-size: 2rem;
+   margin-left: 2rem;
+   color:var(--light-black);
+}
+
+.header .navbar a:hover{
+   color:var(--peru);
+}
+
+
+#aboutus{
+    border-bottom: 4px solid var(--peru) ;
+    
+}
+
+
+
+.info{
+    display: flex;
+    /* position: absolute; */
+    margin-top: 2%;
+    margin-left: 16%;
+    height: 600px;
+    /* background-color: #cd9452; */
+    margin-right: 10%;
+}
+
+.info .imgcont{
+    height: 100%;
+    width: 50%;
+    /* background-color: aqua; */
+}
+
+.info .imgcont img{
+    height: 100%;
+    width: 80%;
+    margin-left: 2%;
+    object-fit: cover;
+
+}
+
+
+.info .aboutpara{
+    height: 100%;
+    width: 50%;
+}
+
+.info .aboutpara h3{
+    font-size: 7rem;
+    margin-top: 7%;
+    color:#cd9452;
+}
+
+.info .aboutpara h4{
+    font-size: 2.5rem;
+    margin-top: 5%;
+}
+
+.info .aboutpara p{
+    font-size:18px;
+    margin-top: 3%;
+}
+
+.moreinfo{
+    /* background-color: bisque; */
+    height: 200px;
+    width: 80%;
+    margin-left: 9%;
+    margin-top: 5%;
+    background-image: url(Dimage/md.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+.moreinfo .moreabout h3{
+    font-size: 3.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.moreinfo .moreabout p{
+    font-size: 2rem;
+    width: 60%;
+    margin-left: 22%;
+    word-spacing: 2px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+.gallery{
+    margin-top: 3%;
+ 
+}
+.heading{
+    text-align: center;
+    margin-bottom: 3rem;
+ }
+ 
+ .heading span{
+    font-size: 2.5rem;
+    color:var(--peru);
+ }
+ 
+ .heading h3{
+    font-size: 4.5rem;
+    color:var(--black);
+ }
+ 
+
+
+.gallery .gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+ }
+ 
+ .gallery .gallery-container .box{
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+ }
+ /* .gallery .gallery-container .imgdiv{
+   
+    overflow: hidden;
+ } */
+ 
+ .gallery .gallery-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+ }
+ 
+ 
+ .gallery .gallery-container .box:hover {
+    transform: scale(1.1);
+    transition: 5s;
+    overflow: hidden;
+ }
+
+ 
+
+/*
+ .footer{
+    text-align: center;
+    /* padding-bottom: 10rem; 
+ }
+ 
+ .footer .icons-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:2rem;
+ }
+ 
+ .footer .icons-container .icons{
+    text-align: center;
+    padding:3rem 2rem;
+ }
+ 
+ .footer .icons-container .icons i{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background: var(--peru);
+    color:var(--white);
+    margin-bottom: .5rem;
+    line-height: 5.8rem;
+    font-size: 2rem;
+ }
+ 
+ .footer .icons-container .icons h3{
+    font-size: 2rem;
+    color:var(--black);
+    padding:1rem 0;
+ }
+ 
+ .footer .icons-container .icons p{
+    line-height: 1.5;
+    font-size: 1.7rem;
+    color:var(--light-black);
+    text-transform: none;
+ }
+ 
+ .footer .share{
+    margin:2rem 0;
+ }
+ 
+ .footer .share a{
+    height: 6rem;
+    width: 6rem;
+    line-height: 5.8rem;
+    color:var(--white);
+    background: var(--black);
+    margin:0 .3rem;
+    font-size: 2.5rem;
+ }  
+ 
+ .footer .share a:hover{
+    background: var(--peru);
+ }
+ 
+ .footer .credit{
+    padding-top: 2.5rem;
+    margin-top: 3rem;
+    border-top: var(--border);
+    font-size: 2rem;
+    color:var(--light-black);
+ }
+ 
+ .footer .credit span{
+    color:var(--peru);
+ }
+ */
+
+ .footer{
+   text-align: center;
+   /* padding-bottom: 10rem; */
+   background-image: url(Dimage/drone3.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.footer .icons-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   gap:2rem;
+}
+
+.footer .icons-container .icons{
+   text-align: center;
+   padding:3rem 2rem;
+}
+
+.footer .icons-container .icons i{
+   height: 6rem;
+   width: 6rem;
+   border-radius: 50%;
+   background: var(--peru);
+   color:var(--white);
+   margin-bottom: .5rem;
+   line-height: 5.8rem;
+   font-size: 2rem;
+}
+
+.footer .icons-container .icons h3{
+   font-size: 2rem;
+   color:var(--white);
+   padding:1rem 0;
+}
+
+.footer .icons-container .icons p{
+   line-height: 1.5;
+   font-size: 1.7rem;
+   color:var(--light-white);
+   text-transform: none;
+}
+
+.footer .share{
+   margin:2rem 0;
+}
+
+.footer .share a{
+   height: 6rem;
+   width: 6rem;
+   line-height: 5.8rem;
+   color:var(--white);
+   background: var(--black);
+   margin:0 .3rem;
+   font-size: 2.5rem;
+}  
+
+.footer .share a:hover{
+   background: var(--peru);
+}
+
+.footer .credit{
+   padding-top: 2.5rem;
+   margin-top: 3rem;
+   border-top: var(--border);
+   font-size: 2rem;
+   color:var(--light-black);
+}
+
+.footer .credit span{
+   color:var(--peru);
+}
+ 
+ 
