@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="maincontai">
+        <div class="yllobg">
+            <div class="box sigin">
+                <h2>Already have an account ?</h2>
+                <button class="signinbtn">Sign in</button>
+            </div>
+            <div class="box sigup">
+                <h2>Don't have an account ?</h2>
+                <button class="signupbtn">Sign up</button>
+            </div>
+        </div>
+        <div class="formbx">
+            <div class="form singinfrm">
+                <form onsubmit=" validateform1()">
+                    <h3>Sign in</h3>
+                    <input type="text" placeholder="Username" class="name">
+                    <small class="error"></small>
+
+                    <input type="password" placeholder="Password" class="password">
+                    <small class="error"></small>
+
+                    <!-- <a  class="btn_dark margin_top">Log in</a>  href="Foodblog.html" -->
+                    <input type="submit" placeholder="Log in" class=" btn_dark margin_top">
+                    <a href="#" class="forgot">Forgot Password</a>
+                </form>
+            </div>
+            <div class="form singupfrm">
+                <form onsubmit=" validateform2()">
+                    <h3>Sign Up</h3>
+                    <input type="text" placeholder="Username" class="Uname">
+                    <small class="error"></small>
+
+                    <input type="email" placeholder="Email Address" class="email" required>
+                    <small class="error"></small>
+
+                    <input type="password" placeholder="Password" class="Upassword" required >
+                    <small class="error"></small>
+
+                    <input type="password" placeholder=" Confirm Password"  class="Uagainpassword" required>
+                    <small class="error"></small>
+                    
+                    <input type="submit" placeholder="dfRegister" class=" btn_dark margin_top">
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const signinBtn= document.querySelector('.signinbtn');
+        const signupbtn= document.querySelector('.signupbtn');
+        const formbx = document.querySelector('.formbx');
+        const body= document.querySelector('body');
+
+
+        signupbtn.onclick= function(){
+            formbx.classList.add('active');
+            body.classList.add('active');
+        }
+
+        signinBtn.onclick= function(){
+            formbx.classList.remove('active');
+            body.classList.remove('active');
+        }
+    </script>
+
+    <!-- form Validation -->
+    <script src="loginpage.js"></script>
+</body>
+</html>

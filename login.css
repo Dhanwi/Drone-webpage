@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s;
+    background-image: url(Dimage/drone4.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* active effect on body and others */
+body.active{
+    background: rgb(232, 232, 232);
+}
+
+body.active .formbx{
+    background: #e3a154;
+}
+body.active .yllobg{
+    background: white;
+}
+
+body.active .yllobg .box h2{
+    color:#cd9452;
+}
+
+body.active .yllobg .box button{
+    background:  #dca566;
+}
+
+/* effect style ended */
+
+.maincontai{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin:20px ;
+    /* background: white; */
+    
+}
+
+.yllobg{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    background: #dca566;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yllobg .box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.yllobg .box h2{
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.yllobg .box button{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+
+.formbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.25);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+/*  */
+.formbx.active{
+    left: 50%;
+    
+}
+
+
+.formbx .form{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
+    
+}
+.formbx .singinfrm{
+    transition-delay: 0.25s;
+    background-image: url(Dimage/Spy_Drone.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+.formbx .singupfrm{
+    left: 100%;
+    transition-delay: 0.25s;
+    background-image: url(Dimage/drone4.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* stye */
+.formbx.active .singinfrm{
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.formbx.active .singupfrm{
+    left: 0;
+    transition-delay: 0.25s;
+}
+/* end */
+
+.formbx .form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formbx .form form h3{
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.formbx .form form input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid black;
+} 
+
+.btn_dark{
+    display:inline-block;
+    background-color: #dca566;;
+    color:#fff;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 20px;
+    max-width: 100px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    transition: all 0.4s;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.error{
+    color: red;
+    
+}
+.error-border{
+    border-bottom: 1px solid red;
+}
+
+
+.formbx.active .singupfrm .btn_dark{
+    background: white;
+    color: #dca566 ;
+}
+
+.formbx .form form .forgot{
+    color: #333;
+}
+
+
+
+@media(max-width:991px) {
+    .maincontai{
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .maincontai .yllobg{
+        top: 0;
+        height: 100%;
+        /* height: 500px; */
+    }
+    .formbx{
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
+        overflow: hidden;
+    }
+    .yllobg .box{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+    }
+    .yllobg .sigin{
+        top: 0;
+    }
+
+    .formbx.active{
+        left: 0;
+        top: 150px;
+        
+    }
+    .formbx .singupfrm{
+        top: 100%;
+        transition-delay: 0.25s;
+    }
+    .formbx.active .singinfrm{
+        top: 100%;
+        
+        transition-delay: 0s;
+    }
+    
+    .formbx.active .singupfrm{
+        /* top: -100%; */
+        top: 0;
+        transition-delay: 0.25s;
+    }
+}
