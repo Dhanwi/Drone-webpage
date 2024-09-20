@@ -10,7 +10,7 @@ The Drone Website project is a dedicated webpage designed to provide detailed in
 The website features comprehensive details about various military drones, including specifications, operational capabilities, and technological advancements. Each drone is presented with a dedicated section or page that provides in-depth information, making it easy for users to understand the role and functionality of each drone.
 <h3>Clean and Professional Design:</h3>
 
-The design of the website focuses on a clean and professional look, ensuring that the information is presented clearly and effectively. The use of CSS allows for styling that highlights key details, improves readability, and provides a visually appealing experience.
+The design of the website focuses on a clean and professional look, ensuring that the information is presented clearly and effectively. CSS allows for styling that highlights key details, improves readability, and provides a visually appealing experience.
 <h3>Interactive Elements:</h3>
 
 JavaScript is used to add interactive elements to the website, such as dynamic content sections, interactive infographics, and smooth transitions between different sections of the site. These features enhance user engagement and make the information more accessible.
